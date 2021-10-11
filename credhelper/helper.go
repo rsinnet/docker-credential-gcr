@@ -21,6 +21,7 @@ package credhelper
 import (
 	"errors"
 	"fmt"
+	"os"
 	"strings"
 
 	"github.com/GoogleCloudPlatform/docker-credential-gcr/config"
@@ -123,17 +124,23 @@ func (ch *gcrCredHelper) getGCRAccessToken() (string, error) {
 
 	It looks for credentials in the following places, preferring the first location found:
 
-	1. A JSON file whose path is specified by the
+	1. A static access token in the GOOGLE_ACCCESS_TOKEN environment variable.
+	2. A JSON file whose path is specified by the
 	   GOOGLE_APPLICATION_CREDENTIALS environment variable.
-	2. A JSON file in a location known to the gcloud command-line tool.
+	3. A JSON file in a location known to the gcloud command-line tool.
 	   On Windows, this is %APPDATA%/gcloud/application_default_credentials.json.
 	   On other systems, $HOME/.config/gcloud/application_default_credentials.json.
-	3. On Google App Engine it uses the appengine.AccessToken function.
-	4. On Google Compute Engine and Google App Engine Managed VMs, it fetches
+	4. On Google App Engine it uses the appengine.AccessToken function.
+	5. On Google Compute Engine and Google App Engine Managed VMs, it fetches
 	   credentials from the metadata server.
 	   (In this final case any provided scopes are ignored.)
 */
 func tokenFromEnv() (string, error) {
+	accessToken, fromEnv := os.LookupEnv("GOOGLE_ACCESS_TOKEN")
+	if fromEnv {
+		return accessToken, nil
+	}
+
 	ts, err := google.DefaultTokenSource(config.OAuthHTTPContext, config.GCRScopes...)
 	if err != nil {
 		return "", err
