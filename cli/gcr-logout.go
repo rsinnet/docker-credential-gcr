@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/GoogleCloudPlatform/docker-credential-gcr/store"
+	"github.com/rsinnet/docker-credential-gcr/store"
 	"github.com/google/subcommands"
 )
 

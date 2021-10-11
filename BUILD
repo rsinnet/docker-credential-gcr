@@ -13,13 +13,13 @@ gazelle(
         "-build_file_name",
         "BUILD,BUILD.bazel",  # Prioritize `BUILD` for newly added files.
     ],
-    prefix = "github.com/GoogleCloudPlatform/docker-credential-gcr",
+    prefix = "github.com/rsinnet/docker-credential-gcr",
 )
 
 go_library(
     name = "go_default_library",
     srcs = ["main.go"],
-    importpath = "github.com/GoogleCloudPlatform/docker-credential-gcr",
+    importpath = "github.com/rsinnet/docker-credential-gcr",
     visibility = ["//visibility:private"],
     deps = [
         "//cli:go_default_library",

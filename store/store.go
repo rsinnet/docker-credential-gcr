@@ -29,8 +29,8 @@ import (
 
 	"context"
 
-	"github.com/GoogleCloudPlatform/docker-credential-gcr/config"
-	"github.com/GoogleCloudPlatform/docker-credential-gcr/util"
+	"github.com/rsinnet/docker-credential-gcr/config"
+	"github.com/rsinnet/docker-credential-gcr/util"
 	"github.com/docker/docker-credential-helpers/credentials"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/google"
