@@ -25,7 +25,7 @@ import (
 	"flag"
 	"os"
 
-	"github.com/GoogleCloudPlatform/docker-credential-gcr/cli"
+	"github.com/rsinnet/docker-credential-gcr/cli"
 	"github.com/google/subcommands"
 )
 

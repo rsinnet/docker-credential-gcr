@@ -19,13 +19,13 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/GoogleCloudPlatform/docker-credential-gcr/mock/mock_cmd"
-	"github.com/GoogleCloudPlatform/docker-credential-gcr/mock/mock_config" // mocks must be generated before test execution
-	"github.com/GoogleCloudPlatform/docker-credential-gcr/mock/mock_store"
+	"github.com/rsinnet/docker-credential-gcr/mock/mock_cmd"
+	"github.com/rsinnet/docker-credential-gcr/mock/mock_config" // mocks must be generated before test execution
+	"github.com/rsinnet/docker-credential-gcr/mock/mock_store"
 
-	"github.com/GoogleCloudPlatform/docker-credential-gcr/config"
-	"github.com/GoogleCloudPlatform/docker-credential-gcr/store"
-	"github.com/GoogleCloudPlatform/docker-credential-gcr/util/cmd"
+	"github.com/rsinnet/docker-credential-gcr/config"
+	"github.com/rsinnet/docker-credential-gcr/store"
+	"github.com/rsinnet/docker-credential-gcr/util/cmd"
 	"github.com/golang/mock/gomock"
 )
 

@@ -1,6 +1,6 @@
 <a href="https://gcr.io"><img src="https://avatars2.githubusercontent.com/u/21046548?s=400&v=4" height="120"/></a>
 
-# docker-credential-gcr [![Build Status](https://github.com/GoogleCloudPlatform/docker-credential-gcr/actions/workflows/test.yml/badge.svg)](https://travis-ci.org/GoogleCloudPlatform/docker-credential-gcr) [![Go Report Card](https://goreportcard.com/badge/GoogleCloudPlatform/docker-credential-gcr)](https://goreportcard.com/report/GoogleCloudPlatform/docker-credential-gcr)
+# docker-credential-gcr [![Build Status](https://github.com/rsinnet/docker-credential-gcr/actions/workflows/test.yml/badge.svg)](https://travis-ci.org/rsinnet/docker-credential-gcr) [![Go Report Card](https://goreportcard.com/badge/rsinnet/docker-credential-gcr)](https://goreportcard.com/report/rsinnet/docker-credential-gcr)
 
 ## Introduction
 
@@ -57,7 +57,7 @@ The program in this repository is written with the Go programming language and c
 You can download the source code, compile the binary, and put it in your `$GOPATH` with `go get`.
 
 ```shell
-go get -u github.com/GoogleCloudPlatform/docker-credential-gcr
+go get -u github.com/rsinnet/docker-credential-gcr
 ```
 
 If `$GOPATH/bin` is in your system `$PATH`, this will also automatically install the compiled binary. You can confirm using `which docker-credential-gcr` and continue to the [section on Configuration and Usage](#configuration-and-usage).
@@ -65,7 +65,7 @@ If `$GOPATH/bin` is in your system `$PATH`, this will also automatically install
 Alternatively, you can use `go build` to build the program. This creates a `docker-credential-gcr` executable.
 
 ```shell
-cd $GOPATH/src/github.com/GoogleCloudPlatform/docker-credential-gcr
+cd $GOPATH/src/github.com/rsinnet/docker-credential-gcr
 go build
 ```
 
